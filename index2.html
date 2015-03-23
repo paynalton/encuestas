@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/encuesta.css">
+<link rel="stylesheet" href="css/colorbox.css">
+<script src="js/jquery.js"></script>
+<script src="js/colorbox.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/encuesta.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Evaluación de Docentes</title>
+</head>
+<body>
+<form class="wrapper encuesta" method="GET" action="http://credivisa.com.mx/recibeencuesta.php">
+	<input type="hidden" name="encuesta" value="enfermeria2">
+	<div Class="instrucciones">Por favor contesta las siguientes preguntas:</div>
+	<ol class="cuestionario">
+		<li class="pregunta option activo">
+			<label class="preg">El docente le dio a conocer el Plan de trabajo al inicio de la práctica, en donde menciona lineamientos de trabajos, fechas de entregas de trabajo, etc.:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_1" name="pregunta[1]"><label for="opt_1">Muy Claro</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_2" name="pregunta[1]"><label for="opt_2">Claro</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_3" name="pregunta[1]"><label for="opt_3">Confuso</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_4" name="pregunta[1]"><label for="opt_4">No estableció</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Siguió el plan de trabajo establecido:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_5" name="pregunta[2]"><label for="opt_5">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_6" name="pregunta[2]"><label for="opt_6">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_7" name="pregunta[2]"><label for="opt_7">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_8" name="pregunta[2]"><label for="opt_8">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Posee una sólida formación en la disciplina:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_9" name="pregunta[3]"><label for="opt_9">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_10" name="pregunta[3]"><label for="opt_10">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_11" name="pregunta[3]"><label for="opt_11">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_12" name="pregunta[3]"><label for="opt_12">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Revisa los trabajos que te solicita y te hace una retroalimentación oportuna y eficaz:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_13" name="pregunta[4]"><label for="opt_13">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_14" name="pregunta[4]"><label for="opt_14">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_15" name="pregunta[4]"><label for="opt_15">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_16" name="pregunta[4]"><label for="opt_16">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Propicia el logro de los objetivos de la práctica:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_17" name="pregunta[5]"><label for="opt_17">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_18" name="pregunta[5]"><label for="opt_18">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_19" name="pregunta[5]"><label for="opt_19">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_20" name="pregunta[5]"><label for="opt_20">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Fomenta la participación y juicio critico:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_21" name="pregunta[6]"><label for="opt_21">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_22" name="pregunta[6]"><label for="opt_22">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_23" name="pregunta[6]"><label for="opt_23">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_24" name="pregunta[6]"><label for="opt_24">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Asesora el Proceso de Atención de Enfermería:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_25" name="pregunta[7]"><label for="opt_25">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_26" name="pregunta[7]"><label for="opt_26">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_27" name="pregunta[7]"><label for="opt_27">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_28" name="pregunta[7]"><label for="opt_28">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Asesora los planes de atención:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_29" name="pregunta[8]"><label for="opt_29">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_30" name="pregunta[8]"><label for="opt_30">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_31" name="pregunta[8]"><label for="opt_31">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_32" name="pregunta[8]"><label for="opt_32">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Favoreció la integración y trabajo grupal:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_33" name="pregunta[9]"><label for="opt_33">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_34" name="pregunta[9]"><label for="opt_34">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_35" name="pregunta[9]"><label for="opt_35">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_36" name="pregunta[9]"><label for="opt_36">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">El profesor (a) guía procedimientos:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_37" name="pregunta[10]"><label for="opt_37">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_38" name="pregunta[10]"><label for="opt_38">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_39" name="pregunta[10]"><label for="opt_39">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_40" name="pregunta[10]"><label for="opt_40">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">El profesor es puntual en la práctica:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_41" name="pregunta[11]"><label for="opt_41">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_42" name="pregunta[11]"><label for="opt_42">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_43" name="pregunta[11]"><label for="opt_43">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_44" name="pregunta[11]"><label for="opt_44">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Manifiesta Interés y respeto al alumno:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_45" name="pregunta[12]"><label for="opt_45">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_46" name="pregunta[12]"><label for="opt_46">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_47" name="pregunta[12]"><label for="opt_47">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_48" name="pregunta[12]"><label for="opt_48">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">El profesor (a) pasaba asistencia:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_49" name="pregunta[13]"><label for="opt_49">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_50" name="pregunta[13]"><label for="opt_50">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_51" name="pregunta[13]"><label for="opt_51">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_52" name="pregunta[13]"><label for="opt_52">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">El profesor te mantuvo al tanto de tu proceso evaluativo:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_53" name="pregunta[14]"><label for="opt_53">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_54" name="pregunta[14]"><label for="opt_54">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_55" name="pregunta[14]"><label for="opt_55">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_56" name="pregunta[14]"><label for="opt_56">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">El profesor fue facilitador para el cumplimiento de los objetivos en práctica:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_57" name="pregunta[15]"><label for="opt_57">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_58" name="pregunta[15]"><label for="opt_58">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_59" name="pregunta[15]"><label for="opt_59">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_60" name="pregunta[15]"><label for="opt_60">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">El profesor es accesible y te apoyó en situaciones que lo necesite:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_61" name="pregunta[16]"><label for="opt_61">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_62" name="pregunta[16]"><label for="opt_62">Casi Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_63" name="pregunta[16]"><label for="opt_63">A veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="4" id="opt_64" name="pregunta[16]"><label for="opt_64">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Te gustaría volver a tener al profesor (a) en práctica clínica:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_65" name="pregunta[17]"><label for="opt_65">Sí</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_66" name="pregunta[17]"><label for="opt_66">No</label>
+			</div>
+		</li>
+	</ol>
+</form>
+<div style="display:none">
+<div class="respuestas">
+	<div class="instrucciones">Estas son tus respuestas:</div>
+	<div class="resp">
+	</div>
+	<div class="botonera">
+		<input type="button" class="cancelar" name="cancelar" value="Corregir">
+		<input type="button" class="guardar" name="guardar" value="Enviar">
+	</div>
+</div>
+<div class="charts">
+	<div class="instrucciones">Resultados Globales</div>
+	<div class="graphs">
+	</div>
+</div>
+</div>
+</body>
+</html>

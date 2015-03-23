@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/encuesta.css">
+<link rel="stylesheet" href="css/colorbox.css">
+<script src="js/jquery.js"></script>
+<script src="js/colorbox.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/encuesta.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Evaluación de campos Clínicos</title>
+</head>
+<body>
+<form class="wrapper encuesta" method="GET" action="http://credivisa.com.mx/recibeencuesta.php">
+	<input type="hidden" name="encuesta" value="enfermeria1">
+	<div Class="instrucciones">Por favor contesta las siguientes preguntas:</div>
+	<ol class="cuestionario">
+		<li class="pregunta option activo">
+			<label class="preg">El <b>Campo Clínico</b> seleccionado permitió cumplir con los objetivos del <span class="info planestudios">Plan de Estudios</span>:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_1" name="pregunta[1]"><label for="opt_1">Totalmente</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_2" name="pregunta[1]"><label for="opt_2">En la mayoría de los casos</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_3" name="pregunta[1]"><label for="opt_3">Solo en algunos casos</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">La <b>Programación del Tiempo</b> destinado a la práctica fue:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_4" name="pregunta[2]"><label for="opt_4">Excesivo</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_5" name="pregunta[2]"><label for="opt_5">Suficiente</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_6" name="pregunta[2]"><label for="opt_6">Insuficiente</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Los <b>recursos de material y equipo</b> proporcionados por el hospital para la realización de técnicas y procedimientos fueron:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_7" name="pregunta[3]"><label for="opt_7">Suficientes</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_8" name="pregunta[3]"><label for="opt_8">Escasos</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_9" name="pregunta[3]"><label for="opt_9">Muy Escasos</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">El <b>tiempo destinado a la práctica</b> en los servicios fue:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_10" name="pregunta[4]"><label for="opt_10">Excesivo</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_11" name="pregunta[4]"><label for="opt_11">Suficiente</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_12" name="pregunta[4]"><label for="opt_12">Insuficiente</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Las facilidades proporcionadas por el equipo de salud para realizar los diferentes procedimientos fueron:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_13" name="pregunta[5]"><label for="opt_13">Continuas</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_14" name="pregunta[5]"><label for="opt_14">Ocasionales</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_15" name="pregunta[5]"><label for="opt_15">Restringidas</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Las relaciones humanas con el equipo de salud fueron:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_16" name="pregunta[6]"><label for="opt_16">Excelentes y armoniosas</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_17" name="pregunta[6]"><label for="opt_17">Ligeras Fricciones</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_18" name="pregunta[6]"><label for="opt_18">Indiferentes</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">Se permitió el manejo de las hojas de enfermería, Kardex, expediente clínico:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_19" name="pregunta[7]"><label for="opt_19">Siempre</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_20" name="pregunta[7]"><label for="opt_20">Algunas Veces</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_21" name="pregunta[7]"><label for="opt_21">Nunca</label>
+			</div>
+		</li>
+		<li class="pregunta option">
+			<label class="preg">La inducción al campo por parte de las autoridades de la institución:</label>
+			<div class="opcion">
+				<input type="radio" value="1" id="opt_22" name="pregunta[8]"><label for="opt_22">Excelente</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="2" id="opt_23" name="pregunta[8]"><label for="opt_23">Buena</label>
+			</div>
+			<div class="opcion">
+				<input type="radio" value="3" id="opt_24" name="pregunta[8]"><label for="opt_24">Deficiente</label>
+			</div>
+		</li>
+		
+	</ol>
+</form>
+<div style="display:none">
+<div class="respuestas">
+	<div class="instrucciones">Estas son tus respuestas:</div>
+	<div class="resp">
+	</div>
+	<div class="botonera">
+		<input type="button" class="cancelar" name="cancelar" value="Corregir">
+		<input type="button" class="guardar" name="guardar" value="Enviar">
+	</div>
+</div>
+<div class="charts">
+	<div class="instrucciones">Resultados Globales</div>
+	<div class="graphs">
+	</div>
+</div>
+</div>
+</body>
+</html>
